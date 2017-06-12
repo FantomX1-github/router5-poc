@@ -7,7 +7,7 @@ import routes from "./paths";
 export default function configureRouter(useListenersPlugin = true) {
     const router = createRouter(routes)
         .usePlugin(loggerPlugin)
-        .usePlugin(browserPlugin({useHash: false, forceDeactivate: true}));
+        .usePlugin(browserPlugin({useHash: false}));
     if(useListenersPlugin) {
         router.usePlugin(listenersPlugin());
     }
