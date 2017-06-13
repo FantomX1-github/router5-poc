@@ -1,11 +1,14 @@
-import * as React from "react";
-import * as ReactDom from "react-dom";
-import {RouterProvider} from "react-router5";
-import configureRouter from "./Routes/configureRouter";
-import App from "./App";
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import App from './components/App';
+import { RouterProvider } from 'react-router5';
+import createRouter from './createRouter';
 
-const router = configureRouter(true);
-const app = <RouterProvider router={router}><App /></RouterProvider>;
+const router = createRouter(true);
+const app = <RouterProvider router={ router }><App /></RouterProvider>;
 
 router.start();
-ReactDom.render(app, document.getElementById("app"));
+ReactDOM.render(
+    app,
+    document.getElementById('app')
+);
