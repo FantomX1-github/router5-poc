@@ -1,17 +1,21 @@
 import * as React from 'react';
 import { BaseLink, withRoute } from 'react-router5';
 
-function Nav(props) {
-    const { router } = props;
-
-    return (
-        <nav>
-            <BaseLink style={{marginLeft: 10, marginRight: 10}} router={ router } routeName='users' routeOptions={{ reload: true }}>Users</BaseLink>
-            <BaseLink style={{marginLeft: 10, marginRight: 10}} router={ router } routeName='users.edit'>Edit Users</BaseLink>
-            <BaseLink style={{marginLeft: 10, marginRight: 10}} router={ router } routeName='products'>Products</BaseLink>
-            <BaseLink style={{marginLeft: 10, marginRight: 10}} router={ router } routeName='products.edit'>Edit Products</BaseLink>
-        </nav>
-    );
+export default class Nav extends React.Component<any, any> {
+    protected router: any;
+    constructor(props){
+        super(props);
+        this.router = props.router;
+    }
+    public render() {
+        return (
+            <nav>
+                <BaseLink router={ this.router } routeName='users' routeOptions={{ reload: true }}>Users</BaseLink>
+                <BaseLink router={ this.router } routeName='users.edit'>Edit Users</BaseLink>
+                <BaseLink router={ this.router } routeName='products'>Products</BaseLink>
+                <BaseLink router={ this.router } routeName='products.edit'>Edit Products</BaseLink>
+            </nav>
+        );
+    }
 }
-
-export default withRoute(Nav);
+// export default withRoute(Nav);

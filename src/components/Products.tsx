@@ -6,9 +6,9 @@ function Products(props) {
 
     return (
         <div>
-            <Link routeName='products' routeOptions={{reload: true}}>Home</Link>
+            Products page
         </div>
     );
 }
 
-export default routeNode('users')(Products);
+export default routeNode('products')(Products);

@@ -6,7 +6,7 @@ function Users(props) {
 
     return (
         <div>
-            <Link routeName='products' routeOptions={{reload: true}}>Home</Link>
+            Users page.
         </div>
     );
 }
