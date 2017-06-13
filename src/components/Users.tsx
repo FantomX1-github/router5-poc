@@ -2,13 +2,13 @@ import * as React from 'react';
 import { routeNode } from 'react-router5';
 import { Link } from 'react-router5';
 
-function Users(props) {
-
-    return (
-        <div>
+export default class Users extends React.Component <any, any> {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return (<div>
             Users page.
-        </div>
-    );
+        </div>)
+    }
 }
-
-export default routeNode('users')(Users);
