@@ -17,4 +17,3 @@ export default class Nav extends React.Component<any, any> {
         );
     }
 }
-// export default withRoute(Nav);
